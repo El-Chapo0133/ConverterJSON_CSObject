@@ -1,6 +1,6 @@
 {
   "name": "converter_json_csobject",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "app to convert json to usable c# code",
   "main": "app.js",
   "scripts": {
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/El-Chapo0133/ConverterJSON_CSObject/issues"
   },
-  "homepage": "https://github.com/El-Chapo0133/ConverterJSON_CSObject#readme"
+  "homepage": "https://github.com/El-Chapo0133/ConverterJSON_CSObject#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "http": "0.0.0"
+  }
 }
