@@ -1,0 +1,5 @@
+# Tests
+Files for testing the application
+
+## Objectives
+ - run main.js with node, then get results as logs in console
