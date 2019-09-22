@@ -1,0 +1,24 @@
+{
+  "name": "converter_json_csobject",
+  "version": "1.0.1",
+  "description": "app to convert json to usable c# code",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/El-Chapo0133/ConverterJSON_CSObject.git"
+  },
+  "keywords": [
+    "node",
+    "c#",
+    "json"
+  ],
+  "author": "Loris Levêque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/El-Chapo0133/ConverterJSON_CSObject/issues"
+  },
+  "homepage": "https://github.com/El-Chapo0133/ConverterJSON_CSObject#readme"
+}

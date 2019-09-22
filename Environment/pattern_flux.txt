@@ -1,0 +1,7 @@
+# Pattern Flux
+Facebook's architecture
+Unidirectionnal data flow
+
+## Must do
+ - Unidirectionnal flow of data inside the app
+ - Every changes goes via action throught the dispatcher
