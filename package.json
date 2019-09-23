@@ -23,6 +23,7 @@
   "homepage": "https://github.com/El-Chapo0133/ConverterJSON_CSObject#readme",
   "devDependencies": {
     "express": "^4.17.1",
+    "fs": "0.0.1-security",
     "http": "0.0.0"
   }
 }
