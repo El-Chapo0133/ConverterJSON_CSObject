@@ -1,21 +1,21 @@
 class DataAcquired {
-    data
-    constructor(p_initializer) {
-        this.initializer = p_initializer
-    }
     listen() {
         do {
-            setTimeout(500, () => {
-                this.data = this.initializer.getData()
-            })
-        } while(this.data === "undefined!")
-        this.triggerdEvent()
+            setTimeout(() => {
+                if (this.isDataAcquired())
+                    this.triggerdEvent()
+            }, 500)
+        } while(this.isDataAcquired())
     }
     triggerdEvent() {
-        this.setGlobals()
+        this.Dispatcher.startListeningTransform()
+        this.Dispatcher.triggeredEvent()
     }
-    setGlobals() {
-        global.dataAcquired = true
+    isDataAcquired() {
+        if (global.dataAcquired === true)
+            return true
+        else
+            return false
     }
 }
 
