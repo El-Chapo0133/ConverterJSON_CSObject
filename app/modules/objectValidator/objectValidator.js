@@ -1,5 +1,14 @@
 class ObjectValidator {
     constructor() {
-        this.list = []
+        
+    }
+    fullValidate(object) {
+
+    }
+    isObject() {
+
+    }
+    isParam() {
+        
     }
 }

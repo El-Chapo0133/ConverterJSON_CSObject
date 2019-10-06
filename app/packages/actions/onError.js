@@ -1,7 +1,4 @@
 class OnError {
-    constructor() {
-
-    }
     logError(err) {
         this.logs(err)
         this.throw(err)

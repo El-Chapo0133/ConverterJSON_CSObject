@@ -28,7 +28,7 @@ class Initializer {
     foreachFiles(p_files, p_directoryPath) {
         console.log("|-| files loaded")
         p_files.forEach((file) => {
-            if (this.isFileRight(file)) {
+            if (this.isFileRight(file) && !this.isOutfile(file)) {
                 this.readFile(file, p_directoryPath)
             }
         })
@@ -49,11 +49,16 @@ class Initializer {
         this.data = p_data.toString()
     }
     isFileRight(p_file) {
-        if (p_file.substring(p_file.length - 5, p_file.length) === ".json") {
+        if (p_file.substring(p_file.length - 5, p_file.length) === ".json")
             return true
-        } else {
+        else
             return false
-        }
+    }
+    isOutfile(file) {
+        if (file === "outfile.txt")
+            return true
+        else
+            return false
     }
     setGlobals() {
         global.dataAcquired = true

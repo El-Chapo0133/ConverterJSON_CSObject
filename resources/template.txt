@@ -1,0 +1,12 @@
+{
+    "objects": [
+        {
+            "ObjectType": "TextBox",
+            "Name": "TextBoxName",
+            "Location": "x;y",
+            "Size": "x;y",
+            "": ""
+        },
+        { /* other object */ }
+    ]
+}
