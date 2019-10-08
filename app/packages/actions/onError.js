@@ -1,3 +1,5 @@
+let log = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
+
 class OnError {
     logError(err) {
         this.logs(err)
@@ -5,8 +7,8 @@ class OnError {
         this.setGlobals()
     }
     logs(err) {
-        console.log("|-| ups, something goes wrong :(")
-        console.log("|-| " + err)
+        log.log("ups, something goes wrong :(")
+        log.log(err)
     }
     throw(err) {
         throw(err)

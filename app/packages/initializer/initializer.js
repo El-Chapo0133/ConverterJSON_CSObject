@@ -1,5 +1,6 @@
 const fs = require('fs')
 let onError = require('../actions/onError.js')
+let log = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
 
 class Initializer {
     constructor() {
@@ -26,7 +27,7 @@ class Initializer {
         })
     }
     foreachFiles(p_files, p_directoryPath) {
-        console.log("|-| files loaded")
+        log.log("files loaded")
         p_files.forEach((file) => {
             if (this.isFileRight(file) && !this.isOutfile(file)) {
                 this.readFile(file, p_directoryPath)
@@ -34,7 +35,7 @@ class Initializer {
         })
     }
     readFile(p_file, p_directoryPath) {
-        console.log("|-| file selectionned : " + p_file)
+        log.log("file selectionned : " + p_file)
         fs.readFile(p_directoryPath + p_file, (err, data) => {
             if (err) {
                 onError.logError(err)
@@ -45,7 +46,7 @@ class Initializer {
     }
     setVariables(p_data) {
         this.setGlobals()
-        console.log("|-| file content getted")
+        log.log("file content getted")
         this.data = p_data.toString()
     }
     isFileRight(p_file) {

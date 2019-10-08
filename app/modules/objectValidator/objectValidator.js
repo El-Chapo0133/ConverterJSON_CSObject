@@ -1,5 +1,6 @@
 let objects = require('../../modules/Lists/object.js')
 let params = require('../../modules/Lists/param.js')
+let log = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
 
 class ObjectValidator {
     constructor() {
@@ -11,8 +12,8 @@ class ObjectValidator {
         } else if (this.isParam(p_object)) {
 
         } else {
-            console.log("|-| wrong type")
-            console.log("|-| type:" + p_object)
+            log.log("wrong type")
+            log.log("type:" + p_object)
         }
     }
     isObject(p_object) {

@@ -2,6 +2,7 @@ global.ENTRYPOINT   = "/home/loris/00_Codes/ConverterJSON_CSObject/"
 global.dataAcquired = false
 global.dataTransformed = false
 
+let log             = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
 let port            = require('../modules/port/port.js')
 let ip              = require('../modules/ip/ip.js')
 let status          = require('../modules/status/status.js')
@@ -19,11 +20,11 @@ app.get('/', (request, response) => {
     response.writeHead(status.OK, { "Content-Type": "text/plain" })
     response.write("Everythings ok here :)")
     response.end()
-    console.log("|-| page loaded")
-    console.log(initializer.getData())
+    log.log("page loaded")
+    log.log(initializer.getData())
 }).listen(port.Port, ip.Ip, (err) => {
     if (!err) {
-        console.log("|-| Server started")
+        log.log("Server started")
     } else {
         onError.logError(err)
     }

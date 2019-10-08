@@ -15,6 +15,14 @@
             "params": [
                 { "name":"Location", "value": "45;80" }
             ]
+        },
+        {
+            "ObjectName": "Label",
+            "dest": "mainForm",
+            "params": [
+                { "name": "Size", "value": "1;1" },
+                { "name": "Name", "value": "Labelpipi" }
+            ]
         }
     ]
 }

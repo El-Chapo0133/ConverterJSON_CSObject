@@ -2,6 +2,7 @@ let c_getJson = require('../../modules/getJson/getJson.js')
 let onError = require('../actions/onError.js')
 let objectValidator = require('../../modules/objectValidator/objectValidator.js')
 let generateComms = require('./generateComm.js')
+let log = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
 
 class Generator {
     constructor(p_data) {
@@ -20,7 +21,7 @@ class Generator {
         // try to get a json
         this.getJson()
         if (this.isJsonRight(this.json)) {
-            console.log("|-| json successfully getted")
+            log.log("json successfully getted")
             var data = this.json.data
             data.objects.forEach((element) => {
                 /** ToDo :
@@ -78,7 +79,6 @@ class Generator {
     getJson() {
         let getJson = new c_getJson(this.data)
         this.json = getJson.getJson()
-        console.log(this.json)
     }
     isJsonRight(json) {
         if (!json.errors)

@@ -1,5 +1,6 @@
 let c_generator = require('../generator/generator.js')
 let c_display = require('../../view/displayData.js')
+let log = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
 
 class Dispatcher {
     constructor(p_dataAcquired, p_dataTransformed, p_initializer) {
@@ -12,10 +13,10 @@ class Dispatcher {
     }
     startListeningAcquire() {
         this.dataAcquired.listen()
-        console.log("|-| started listening [Acquire]")
+        log.log("started listening [Acquire]")
     }
     startListeningTransform() {
-        console.log("|-| started listening [Transform]")
+        log.log("started listening [Transform]")
         this.dataTransformed.listen()
     }
     triggeredEvent() {
@@ -29,8 +30,8 @@ class Dispatcher {
         this.generator = new c_generator(this.initializer.getData())
     }
     startDisplay() {
-        console.log("|-| transformation made")
-        console.log("|-| displaying...")
+        log.log("transformation made")
+        log.log("displaying...")
         var display = new c_display(this.generator.dataTransformed)
     }
     isDataTransformed() {

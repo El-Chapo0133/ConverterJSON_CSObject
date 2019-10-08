@@ -1,0 +1,16 @@
+{
+    "objects": [
+        "TextBox",
+        "Panel",
+        "Label",
+        "ComboBox",
+        "Button",
+        ""
+    ],
+    "params": [
+        "Name",
+        "Size",
+        "Location",
+        ""
+    ]
+}

@@ -1,3 +1,5 @@
+let log = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
+
 class GenerateComms {
     generateComms(object) {
         var t_data = "/** object:" + object.ObjectName + "\n"

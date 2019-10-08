@@ -1,3 +1,5 @@
+let log = require(global.ENTRYPOINT + "/app/modules/log/logData.js")
+
 class GetJson {
     constructor(p_data) {
         this.data = p_data
