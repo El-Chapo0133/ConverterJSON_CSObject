@@ -10,3 +10,10 @@ Converter json into usable C# code for form object
  - app in nodejs
  - return it in a file generated
  - Use Flux pattern
+
+## Infos
+ - input json, get C# code
+ - exemple in resources/template.txt
+ - getter json will get 2 more params : errors{bool} and errorsLog{string}
+ - errors say if there is any errors{bool}, and errorsLogs is an description of the error
+ - if there is no errors: "errors": false, "errorsLog": 'null'

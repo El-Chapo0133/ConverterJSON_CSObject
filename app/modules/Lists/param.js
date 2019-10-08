@@ -10,3 +10,4 @@ class ListParam {
         this.list.push("Name")
     }
 }
+module.exports = new ListParam()

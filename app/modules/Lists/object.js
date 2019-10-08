@@ -8,6 +8,7 @@ class ListObjects {
     }
     setList() {
         this.list.push("TextBox")
+        this.list.push("Label")
     }
 }
 
