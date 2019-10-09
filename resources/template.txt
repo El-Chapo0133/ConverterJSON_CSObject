@@ -1,12 +1,32 @@
+# this is a template for the json input
+# 
+# 
+# Naturally, you cannot put comments on json (ecept jsonc)
+# so there is comments for explain what do/be used for what
+
+#
+# the file "outfile.txt" is used to get the code generated
+# every content already in the file will be erased
+#
+
 {
+    // number of space before the code output
+    "nbSpace": 4,
+    // array of object to generate
     "objects": [
         {
             "ObjectType": "TextBox",
-            "Name": "TextBoxName",
-            "Location": "x;y",
-            "Size": "x;y",
-            "": ""
+            "dest": "destination of the object",
+            "params": [
+                {
+                    "name": "Name", // you need to respect C# name convention : ex Name, Location, Size
+                    "value": "objectName" // ex: TextBoxName1
+                },
+                {
+                    // next param
+                }
+            ]
         },
-        { /* other object */ }
+        { /* next object */ }
     ]
 }
