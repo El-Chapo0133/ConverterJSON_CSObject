@@ -2,6 +2,7 @@
  * @param {Location}: 2;8
  * @param {Name}: TextBoxName
  * @param {Size}: 120;40
+ * @destination {mainForm}
  * */
 TextBox object1 = new TextBox() {
     Location = new Point(2;8),
@@ -10,6 +11,7 @@ TextBox object1 = new TextBox() {
 }
 /** object:Label
  * @param {Location}: 45;80
+ * @destination {mainForm}
  * */
 Label object2 = new Label() {
     Location = new Point(45;80)
@@ -17,6 +19,7 @@ Label object2 = new Label() {
 /** object:Label
  * @param {Size}: 1;1
  * @param {Name}: Labelpipi
+ * @destination {mainForm}
  * */
 Label object3 = new Label() {
     Size = new Size(1;1),
@@ -27,3 +30,4 @@ Label object3 = new Label() {
 mainForm.Controls.Add(object1);
 mainForm.Controls.Add(object2);
 mainForm.Controls.Add(object3);
+

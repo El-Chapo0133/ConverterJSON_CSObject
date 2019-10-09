@@ -6,6 +6,7 @@ class GenerateComms {
         object.params.forEach((param) => {
             t_data += " * @param {" + param.name + "}: " + param.value + "\n"
         })
+        t_data += " * @destination {" + object.dest + "}\n"
         t_data += " * */\n"
         return t_data
     }

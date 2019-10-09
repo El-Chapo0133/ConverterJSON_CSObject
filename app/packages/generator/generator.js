@@ -14,6 +14,7 @@ class Generator {
         var t_data = ""
         /** temp var to store object dest */
         var t_dest = ""
+        var r_data = ""
         var index = 1
         /** TODO :
          * generate c# code from json
@@ -21,7 +22,7 @@ class Generator {
         // try to get a json
         this.getJson()
         if (this.isJsonRight(this.json)) {
-            log.log("json successfully getted")
+            log.log("json successfully converted")
             var data = this.json.data
             data.objects.forEach((element) => {
                 /** ToDo :
@@ -52,7 +53,14 @@ class Generator {
         } else {
             onError.logError(this.json.errorsLog)
         }
-        return t_data + "\n\n" + t_dest
+        var final_data = (t_data + "\n\n" + t_dest).split("\n")
+        final_data.forEach((line) => {
+            for (index = 0; index < this.json.data.nbSpace; index++) {
+                r_data += " "
+            }
+            r_data += (line + "\n")
+        })
+        return r_data
     }
     addParam(param) {
         switch(param.name) {
@@ -99,5 +107,4 @@ class Generator {
             return false
     }
 }
-
 module.exports = Generator
