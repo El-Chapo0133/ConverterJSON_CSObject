@@ -30,4 +30,3 @@ Label object3 = new Label() {
 mainForm.Controls.Add(object1);
 mainForm.Controls.Add(object2);
 mainForm.Controls.Add(object3);
-
